@@ -1,7 +1,15 @@
 import mongoose from "mongoose";
 import QnaPair, {dbInfo} from "./DbModel.js";
  
+export const testRecords = async (req, res) => {
+    res.status(200).json({message: 'tested?!'});
+    console.log('--yy--back: TESTINGGGGGGGGGGGG')
+}
+
 export const getRecords = async (req, res) => {
+    // res.status(200).json({message: 'tested?!'});
+    // return
+
     //data = req.data
     console.log('--yy-- back: getRecords.. ')
     try {
@@ -90,3 +98,4 @@ export const deleteRecords = async (req, res) => {
     }
 }
 //db.products.deleteMany({ price: 899 })
+
