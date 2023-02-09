@@ -55,7 +55,9 @@ app.use(cors());
 app.use(express.json());
 app.use(UserRoute);
  
-app.listen(5000, ()=> console.log('Server up and running...'));
+const port = process.env.PORT || '5000'
+console.log('*** PORT : ' + port)
+app.listen(port, ()=> console.log('Server up and running...'));
 
 
 //export default db;
